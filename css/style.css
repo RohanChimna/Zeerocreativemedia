@@ -1,0 +1,315 @@
+/*Body Align*/
+body {
+  max-width: 1400px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.logo img {
+  width: 150%;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+/*Header Text*/
+header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-gap: 30px;
+}
+
+/*NavBar Align*/
+nav ul {
+  list-style-type: none;
+  text-align: end;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  padding: 20px 30px;
+  display: inline-block;
+}
+
+/*NavBar Hover */
+nav ul li a:hover {
+  background-color: orange;
+  color: black;
+}
+
+nav ul ul {
+  position: absolute;
+  padding: 0;
+  display: none;
+}
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul ul li {
+  display: block;
+}
+nav ul ul li a {
+  background-color: black;
+  color: white;
+  display: block;
+}
+/*Parallax Image */
+.parallax {
+  background-image: url("../images/home_Image.jpg");
+  color: white;
+  font-size: 36px;
+  background-attachment: fixed;
+  background-position: 40%;
+  text-align: center;
+  padding: 100px;
+}
+
+/* Images Layout and  Design */
+
+.design {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.design__wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Images Hover */
+.design__description {
+  position: absolute;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background: orange;
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  padding-top: 30%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  visibility: hidden;
+  transition: opacity 0.5, visibility 0.5s;
+}
+
+.design__wrap:hover .design__description {
+  visibility: visible;
+  opacity: 70%;
+}
+
+/*Form*/
+
+form {
+  border: 4px solid #ffffff;
+}
+
+.form-container {
+  background-color: #ffffff;
+}
+
+/*Form Input Field*/
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px;
+  display: inline-block;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  text-align: start;
+}
+/*Form Submit Button */
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+  text-align: center;
+}
+/*Form Submit Button Hover*/
+input[type="submit"]:hover {
+  opacity: 0.8;
+  background-color: orange;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+/*Footer*/
+footer {
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+}
+
+/*Service Layout Alignment*/
+.service {
+  text-align: center;
+}
+
+.service h3 {
+  text-align: center;
+  padding-left: 10px;
+}
+
+.service ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.print {
+  margin-left: 30px;
+}
+
+.pack {
+  margin-left: 30px;
+}
+
+.service-grid {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* Fav-icons in the footer design */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+/* Fav-icons Hovers*/
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/*Copyright text alignment*/
+.copyright {
+  padding: 10px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*About Page*/
+.about {
+  width: 100%;
+}
+
+.about-container h2 {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.about-container {
+  text-align: center;
+}
+
+.about-text {
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+/*Media Queries For Different Devices to make website Responsive*/
+
+@media only screen and (max-width: 800px) {
+  body {
+    max-width: 800px;
+  }
+
+  .container {
+    width: 600px;
+    margin: auto;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .design {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    max-width: 500px;
+  }
+
+  .container {
+    width: 300px;
+    margin: auto;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr;
+  }
+
+  .design {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
